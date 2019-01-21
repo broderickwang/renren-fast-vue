@@ -2,8 +2,8 @@
   <nav class="site-navbar" :class="'site-navbar--' + navbarLayoutType">
     <div class="site-navbar__header">
       <h1 class="site-navbar__brand" @click="$router.push({ name: 'home' })">
-        <a class="site-navbar__brand-lg" href="javascript:;">人人快速开发平台</a>
-        <a class="site-navbar__brand-mini" href="javascript:;">人人</a>
+        <a class="site-navbar__brand-lg" href="javascript:;">ESQ项目管理云平台</a>
+        <a class="site-navbar__brand-mini" href="javascript:;">ESQ</a>
       </h1>
     </div>
     <div class="site-navbar__body clearfix">
@@ -17,19 +17,22 @@
       <el-menu
         class="site-navbar__menu site-navbar__menu--right"
         mode="horizontal">
-        <el-menu-item index="1" @click="$router.push({ name: 'theme' })">
-          <template slot="title">
-            <el-badge value="new">
-              <icon-svg name="shezhi" class="el-icon-setting"></icon-svg>
-            </el-badge>
-          </template>
-        </el-menu-item>
-        <el-menu-item index="2">
+        <!--<a href="./static/operation_manual.pdf" download="MEMS用户手册.pdf">-->
+          <el-menu-item index="1" @click="$router.push({ name: 'theme' })">
+            <template slot="title">
+              <el-badge value="new">
+                <icon-svg name="shezhi" class="el-icon-setting"></icon-svg>
+              </el-badge>
+            </template>
+          </el-menu-item>
+        <!--</a>-->
+
+        <el-menu-item index="2" hidden>
           <el-badge value="hot">
             <a href="//www.renren.io/" target="_blank">官方社区</a>
           </el-badge>
         </el-menu-item>
-        <el-submenu index="3">
+        <el-submenu index="3" hidden>
           <template slot="title">Git源码</template>
           <el-menu-item index="2-1"><a href="//github.com/daxiongYang/renren-fast-vue" target="_blank">前端</a></el-menu-item>
           <el-menu-item index="2-2"><a href="//git.oschina.net/renrenio/renren-fast" target="_blank">后台</a></el-menu-item>

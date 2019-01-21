@@ -34,11 +34,12 @@
       </el-tab-pane>
     </el-tabs>
     <!-- 主入口标签页 e -->
-    <el-card v-else :body-style="siteContentViewHeight">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
-    </el-card>
+    <!--<el-card v-else :body-style="siteContentViewHeight">
+
+    </el-card>-->
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </main>
 </template>
 
